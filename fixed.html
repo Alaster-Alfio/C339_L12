@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Fixed Code</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <!-- Fixed Layout Shifts -->
+        <div style="height: 100px">Content above</div>
+        <img
+            src="large-image.jpg"
+            width="600"
+            height="400"
+            style="display: block"
+        />
+        <div style="height: 100px">Content below</div>
+
+        <!-- Reduced Unused CSS -->
+        <style>
+            body {
+                font-family: Arial;
+            } /* Only necessary styles */
+        </style>
+
+        <!-- Serve Next-Gen Images -->
+        <img src="image.webp" alt="A sample image" />
+
+        <!-- Properly Sized Images -->
+        <img
+            src="image.jpg"
+            alt="A properly sized image"
+            width="600"
+            height="400"
+        />
+
+        <!-- Eliminated Render-Blocking Resources -->
+        <link
+            rel="preload"
+            href="styles.css"
+            as="style"
+            onload="this.rel='stylesheet'"
+        />
+
+        <!-- Image With ALT Text -->
+        <img
+            src="img/wallpaper.jpg"
+            alt="view of the ocean from a mountain top"
+        />
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Problematic Code</title>
+    </head>
+    <body>
+        <!-- Avoid Large Layout Shifts -->
+        <div style="height: 100px">Content above</div>
+        <img src="large-image.jpg" />
+        <div style="height: 100px">Content below</div>
+
+        <!-- Reduce Unused CSS -->
+        <style>
+            body {
+                font-family: Arial;
+            } /* Used */
+            h1 {
+                color: blue;
+            } /* Not Used */
+            p {
+                margin: 20px;
+            } /* Not Used */
+        </style>
+
+        <!-- Serve Legacy Images -->
+        <img src="image.jpg" alt="A sample image" />
+
+        <!-- Improperly Sized Images -->
+        <img src="oversized-image.jpg" alt="A sample oversized image" />
+
+        <!-- Render-Blocking Resources -->
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- Image Without ALT Text -->
+        <img src="img/wallpaper.jpg" />
+    </body>
+</html>
